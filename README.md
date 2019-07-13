@@ -30,21 +30,38 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The biggest difference between the `.forEach` & `.map` is that .forEach executes a function for each array element, and .map creates a new array with the results of calling a provided function on every element in the calling array.
+
 2. What is the difference between a function and a method?
+
+The function is defined outside of an Object and a method is defined as the property of an object.
 
 3. What is closure?
 
+A closure is when you have a inner function that can be access to the outer functions variables scope chain.
+
 4. Describe the four rules of the 'this' keyword.
 
+The four rules of `this` keyword are
+    1. Window Binding
+        a. Is when you call console.log(this); by it's self and it refers to the window object.
+    2.Implicit Binding
+        a. this is when the object is standing before the dot which the keyword will be bound to.
+    3. Explicit Binding 
+        a. this is when you have a function caal to use a object for this binding without putting a property function reference on the object.
+    4. New Binding 
+        a. an empty object is created and referenced by this variable and it takes the prototype of the function.
+
 5. Why do we need super() in an extended class?
+super() is like the call function which helps to inherit the parent function
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a forked copy of this project.
+- [x] Add PM as collaborator on Github.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
 - [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
 - [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
 - [ ] You are now ready to build this project with your preferred IDE
