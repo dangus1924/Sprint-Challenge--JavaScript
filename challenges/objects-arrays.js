@@ -86,21 +86,24 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [];
-for(let i = 0; i < graduates.length; i++) {
-  console.log(contactInfo.push(`${graduates[i]["first_name"]} ${graduates[i]["email"]}`));
-}
+const contactInfo = graduates.map((graduate) => `${graduate.first_name} ${graduate.email}`);
+// for(let i = 0; i < graduates.length; i++) {
+//   console.log(contactInfo.push(`${graduates[i]["first_name"]} ${graduates[i]["email"]}`));
+// }
 
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-for(let i = 0; i < graduates.length; i++) {
-  if (graduates[i]["university"].indexOf("Uni") >=0) {
-    uni.push(graduates[i]["university"]);
-  }
-}
+// for(let i = 0; i < graduates.length; i++) {
+//   if (graduates[i]["university"].indexOf("Uni") >=0) {
+//     uni.push(graduates[i]["university"]);
+//   }
+// }
+
+universities.forEach((university) => (university.includes("Uni")) ? uni.push(university) : false);
+
 console.log(uni);
 
 
@@ -131,7 +134,8 @@ console.log(animalNames);
 
 /* Request 2: .map()    
 
-The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
+The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  
+Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
 
